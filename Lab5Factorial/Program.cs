@@ -12,16 +12,16 @@ namespace Lab5Factorial
         {
             Console.WriteLine("Please input a number.");
             int userNumber = int.Parse(Console.ReadLine());
-            int x = userNumber;
-            for (int i = 1; i < x; i++)
-            {
-                int factorial = userNumber * --userNumber;
-                Console.WriteLine(factorial);
-                Console.ReadKey();
-            }
+
+            int result;
             
-
+            result = userNumber;
+            for (int num = 1; num < userNumber; num++)
+            {
+                result = result * num;
+            }
+            Console.WriteLine(result);
+            Console.ReadKey();
         }
-
     }
 }
