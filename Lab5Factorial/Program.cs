@@ -10,18 +10,33 @@ namespace Lab5Factorial
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please input a number.");
-            int userNumber = int.Parse(Console.ReadLine());
-
-            int result;
-            
-            result = userNumber;
-            for (int num = 1; num < userNumber; num++)
+            while (true)
             {
-                result = result * num;
+                Console.Clear();
+                Console.WriteLine("Please input a number.");
+                int userNumber = int.Parse(Console.ReadLine());
+
+                long result;
+
+                result = userNumber;
+                for (int num = 1; num < userNumber; num++)
+                {
+                    result = result * num;
+                }
+                Console.WriteLine(result);
+                Console.ReadKey();
+
+                Console.WriteLine("Do you want to run again (Y/N)? ");
+
+
+                if (Console.ReadLine().ToLower() != "y")
+                {
+                    Console.WriteLine("Goodbye");
+                    Console.ReadLine();
+                    break;
+
+                }
             }
-            Console.WriteLine(result);
-            Console.ReadKey();
         }
     }
 }
